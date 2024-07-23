@@ -1,0 +1,26 @@
+:root {
+    --hover-color: #ff0000;
+    --text-color: white;
+    --primary-color: #000;
+    --secondary-color: #fff;
+     --light-display:none;
+     --dark-display:block;
+   
+}
+
+
+.light {
+    --hover-color: #ff0000;
+    --text-color: #000;
+    --primary-color: #fff;
+    --secondary-color:#000;
+    --light-display:block;
+    --dark-display:none;
+}
+
+// .blue{
+//     --hover-color: #0000ff;
+//     --text-color: #000;
+//     --primary-color: #9898ff;
+//     --secondary-color: #000;
+// }

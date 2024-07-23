@@ -1,0 +1,243 @@
+:root {
+  --hover-color: #ff0000;
+  --text-color: white;
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --light-display:none;
+  --dark-display:block;
+}
+
+.light {
+  --hover-color: #ff0000;
+  --text-color: #000;
+  --primary-color: #fff;
+  --secondary-color:#000;
+  --light-display:block;
+  --dark-display:none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px;
+}
+.nav .logo {
+  display: flex;
+  display: var(--light-display);
+}
+.nav .logo img {
+  width: 100px;
+  height: 100px;
+}
+.nav .light-logo {
+  display: flex;
+  display: var(--dark-display);
+}
+.nav .light-logo img {
+  width: 100px;
+  height: 100px;
+}
+.nav .list {
+  display: flex;
+  align-items: center;
+}
+.nav .list ul {
+  list-style-type: none;
+  display: flex;
+}
+.nav .list li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+.nav .list li :hover {
+  color: var(--hover-color);
+}
+.nav .mode {
+  display: flex;
+}
+.nav .mode label {
+  width: 80px;
+  height: 30px;
+  display: block;
+  border: 1px solid black;
+  border-radius: 25px;
+  box-shadow: inset 1px 0px 2px 0px;
+  position: relative;
+  transition: 0.5s;
+  background-color: var(--secondary-color);
+}
+.nav .mode label:after {
+  content: "";
+  width: 24px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: orange;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  box-shadow: 1px 0px 2px 0px;
+  transition: 0.5s;
+}
+.nav .mode input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.nav .mode input:checked + label {
+  background-color: var(--secondary-color);
+}
+.nav .mode input:checked + label:after {
+  left: 50px;
+}
+.nav .mode input:active + label:after {
+  width: 20px;
+}
+.nav .mode input:checked + :has(.body) {
+  background-color: blue;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+}
+.content .intro {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5%;
+}
+.content .intro h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  color: var(--text-color);
+}
+.content .intro h1 span {
+  color: red;
+}
+.content .intro p {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
+}
+.content .intro .btn {
+  padding-top: 20px;
+}
+.content .intro .btn button {
+  padding: 7px 10px;
+  color: var(--text-color);
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  font-family: "Montserrat", sans-serif;
+}
+.content .intro .btn :hover {
+  background-color: var(--hover-color);
+}
+.content .intro .icon {
+  padding-top: 100px;
+  display: flex;
+  gap: 15px;
+}
+.content .intro .icon .icn-one {
+  font-weight: bold;
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+}
+.content .intro .icon .icn-one:hover {
+  color: var(--hover-color);
+}
+.content .intro .icon .icn-two {
+  font-weight: bold;
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  position: relative;
+}
+.content .intro .icon .icn-two::after {
+  content: "";
+  height: 2px;
+  width: 7px;
+  background-color: black;
+  position: absolute;
+  left: 67%;
+  top: 23%;
+  right: 0;
+  bottom: 0;
+}
+.content .intro .icon .icn-two:hover {
+  color: var(--hover-color);
+}
+.content .intro .icon .fa-dribbble {
+  font-weight: 200;
+  color: var(--text-color);
+  font-size: 25px;
+  padding-top: 2px;
+}
+.content .intro .icon .fa-dribbble:hover {
+  color: var(--hover-color);
+}
+.content .animation {
+  display: flex;
+  flex: 2;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding-left: 20px;
+}
+.content .animation:hover .girl-box {
+  margin-top: 30px;
+}
+.content .animation:hover .girl {
+  margin-left: -30px;
+}
+.content .animation .girl-box {
+  position: relative;
+  width: 80%;
+  transition: 1s;
+  transition-timing-function: ease;
+}
+.content .animation .girl-box .box {
+  width: 100%;
+  padding-top: 100%;
+  border-top-left-radius: 70%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 70%;
+  border-bottom-right-radius: 20%;
+  background-color: red;
+}
+.content .animation .girl {
+  transition: 1s;
+  transition-timing-function: ease;
+  position: absolute;
+  width: calc(300px + 30%);
+  left: 0;
+}
+.content .animation .girl img {
+  width: 100%;
+  margin-bottom: -28px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.screen-view {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-color);
+}
+
+/*# sourceMappingURL=style.css.map */

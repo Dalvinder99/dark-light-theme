@@ -1,0 +1,12 @@
+{
+  "name": "dark-light-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-style": "sass --watch ./assets/styles/scss/main.scss ./styles/style.css"
+  },
+  "author": "Dalvinder",
+  "license": "ISC",
+  "description": ""
+}

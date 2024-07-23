@@ -1,0 +1,111 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+    
+    .logo {
+        display: flex;
+        display: var(  --light-display);
+    
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    
+    }
+
+    .light-logo {
+        display: flex;
+        display: var(--dark-display);
+    
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+     .list {
+        display: flex;
+        align-items: center;
+    
+        ul {
+            list-style-type: none;
+            display: flex;
+        }
+    
+        li {
+    
+    
+            a {
+                text-decoration: none;
+                color:var( --text-color);
+                font-family: "Poppins", sans-serif;
+                padding: 10px;
+                letter-spacing: 1px;
+            }
+    
+            :hover {
+                color: var( --hover-color);
+            }
+        }
+    }
+    
+    .mode{
+           display: flex;
+       
+        label{
+            width:80px;
+            height:30px;
+            display: block;
+            border: 1px solid black;
+            border-radius: 25px;
+            box-shadow: inset 1px 0px 2px 0px;
+             position: relative;
+             transition: 0.5s;
+             background-color: var(--secondary-color);
+        }
+      
+       
+
+        label:after{
+                  content: '';
+                  width: 24px;
+                  height: 22px;
+                  border-radius: 50%;
+                  background-color: orange;
+                  position: absolute;
+                  top: 3px;
+                  left: 3px;
+                  box-shadow: 1px 0px 2px 0px;
+                  transition: 0.5s;
+
+        }
+
+         input{
+              width: 0;
+              height: 0;
+              visibility: hidden;
+        }
+      input:checked + label{
+           background-color:var(--secondary-color);
+      }
+     
+          input:checked + label:after{
+                left:50px;
+
+          }
+          input:active + label:after{
+             width:20px;
+          }
+         
+        input:checked + :has(.body){
+              background-color: blue;
+        }
+
+}
+
+}
+
+
+
+
+
